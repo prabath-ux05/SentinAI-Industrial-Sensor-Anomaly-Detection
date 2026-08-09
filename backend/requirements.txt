@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+pydantic
+supabase
+scikit-learn
+pandas
+numpy
+python-dotenv
+sqlalchemy
+psycopg2-binary
+passlib
+bcrypt
+pyjwt
+requests
+joblib
+pytest
+httpx
