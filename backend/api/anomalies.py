@@ -63,7 +63,7 @@ def _count_query(db: Session, base_query) -> int:
     multi-table joins (SQLAlchemy's `.count()` wraps the full join in a subquery
     but can generate an extra GROUP-BY or miscount when OUTER JOINs are involved).
     """
-    count_q = base_query.with_entities(func.count(models.AnomalyEvent.id))
+    count_q = base_query.order_by(None).with_entities(func.count(models.AnomalyEvent.id))
     return db.execute(count_q).scalar() or 0
 
 

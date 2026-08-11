@@ -69,13 +69,13 @@ class SensorSimulator:
                 
                 print(f"Tick {self.tick}: {json.dumps(payloads)}")
                 
-                # Send to API if needed (comment out or ignore errors if backend is not up)
-                try:
-                    # In a real scenario, we might POST these individually or as a batch
-                    for p in payloads:
-                         requests.post(API_URL, json=p, timeout=1)
-                except requests.exceptions.RequestException:
-                    pass
+                # Send to API
+                for p in payloads:
+                    try:
+                        requests.post(API_URL, json=p, timeout=3)
+                    except requests.exceptions.RequestException as e:
+                        # Print error so we know if it's failing
+                        print(f"  [!] Failed to send {p['sensor_id']}: {e}")
                 
                 time.sleep(interval)
         except KeyboardInterrupt:
