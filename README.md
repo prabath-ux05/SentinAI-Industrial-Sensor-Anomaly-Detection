@@ -22,12 +22,17 @@
 
 ---
 
-<div align="center">
-  <img src="docs/images/dashboard-preview.png" alt="SentinAI Dashboard Preview" width="100%" />
-  <br/>
-  <em>SentinAI Live Dashboard — Real-time telemetry, anomaly alerts, and equipment health scoring</em>
-</div>
+## 🎥 Demo Video
 
+<p align="center">
+  <a href="https://drive.google.com/file/d/1ziXvUwYBnDC0tkWOig68zK0IHpS5yBH7/view?usp=sharing">
+    <img src="docs/dashboard-preview.png" width="900">
+  </a>
+</p>
+
+<p align="center">
+  <strong>Click the preview image to watch the complete SentinAI demonstration.</strong>
+</p>
 ---
 
 ## 🚀 Overview
