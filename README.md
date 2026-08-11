@@ -22,6 +22,14 @@
 
 ---
 
+<div align="center">
+  <img src="docs/images/dashboard-preview.png" alt="SentinAI Dashboard Preview" width="100%" />
+  <br/>
+  <em>SentinAI Live Dashboard — Real-time telemetry, anomaly alerts, and equipment health scoring</em>
+</div>
+
+---
+
 ## 🚀 Overview
 
 **SentinAI** is a full-stack industrial IoT monitoring platform built for real-world sensor data. It continuously ingests telemetry from sensors (temperature, pressure, flow), runs it through a custom anomaly detection engine, maintains a live equipment health score, and provides an AI-powered Maintenance Copilot for root-cause analysis and action planning.
