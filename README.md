@@ -1,5 +1,4 @@
 <div align="center">
-
 <h1>
   <img src="https://img.shields.io/badge/SentinAI-Industrial%20Monitoring-0d9488?style=for-the-badge" alt="SentinAI" />
 </h1>
