@@ -14,9 +14,11 @@ COPY backend/requirements.txt .
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire project to get access to both backend and root structures if needed
-# We assume the docker context is the root directory
+# Copy the backend code
 COPY backend ./backend
+
+# Copy the ML engine (lives at project root, not inside backend)
+COPY engine ./engine
 
 # Environment variables
 ENV PYTHONUNBUFFERED=1
