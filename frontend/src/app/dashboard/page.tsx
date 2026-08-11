@@ -116,6 +116,7 @@ const SeverityBadge = ({ severity }: { severity: string }) => {
 const MAX_CHART_POINTS = 100;
 const POLL_INTERVAL_MS = 5000;
 const DASHBOARD_ALERTS_LIMIT = 5;
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 export default function DashboardPage() {
   const [summary, setSummary] = useState<DashboardSummary | null>(null);
@@ -133,9 +134,9 @@ export default function DashboardPage() {
   const fetchData = useCallback(async () => {
     try {
       const [summaryRes, alertsRes, telemetryRes] = await Promise.all([
-        fetch("http://localhost:8000/api/dashboard/summary"),
-        fetch(`http://localhost:8000/api/dashboard/alerts?limit=${DASHBOARD_ALERTS_LIMIT}`),
-        fetch("http://localhost:8000/api/dashboard/telemetry?limit=100"),
+        fetch(`${API}/dashboard/summary`),
+        fetch(`${API}/dashboard/alerts?limit=${DASHBOARD_ALERTS_LIMIT}`),
+        fetch(`${API}/dashboard/telemetry?limit=100`),
       ]);
 
       if (!summaryRes.ok || !alertsRes.ok || !telemetryRes.ok) {
@@ -377,10 +378,10 @@ export default function DashboardPage() {
                         stroke="#475569"
                         fontSize={10}
                         tick={{ fill: "#64748b" }}
-                        domain={([min, max]: [number, number]) => [
+                        domain={([min, max]: readonly [number, number]) => [
                           Math.floor(min * 0.98),
                           Math.ceil(max * 1.02),
-                        ]}
+                        ] as [number, number]}
                         width={40}
                       />
                       <Tooltip
@@ -430,10 +431,10 @@ export default function DashboardPage() {
                         stroke="#475569"
                         fontSize={10}
                         tick={{ fill: "#64748b" }}
-                        domain={([min, max]: [number, number]) => [
+                        domain={([min, max]: readonly [number, number]) => [
                           Math.floor(min * 0.98),
                           Math.ceil(max * 1.02),
-                        ]}
+                        ] as [number, number]}
                         width={40}
                       />
                       <Tooltip
@@ -483,10 +484,10 @@ export default function DashboardPage() {
                         stroke="#475569"
                         fontSize={10}
                         tick={{ fill: "#64748b" }}
-                        domain={([min, max]: [number, number]) => [
+                        domain={([min, max]: readonly [number, number]) => [
                           Math.floor(min * 0.98),
                           Math.ceil(max * 1.02),
-                        ]}
+                        ] as [number, number]}
                         width={40}
                       />
                       <Tooltip
