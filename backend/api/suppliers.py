@@ -2,7 +2,7 @@
 backend/api/suppliers.py – Google Maps Places proxy for SentinAI.
 
 Environment variables required:
-    GOOGLE_MAPS_API_KEY   – Standard Maps Platform key with Places API enabled.
+    NEXT_PUBLIC_GOOGLE_MAPS_API_KEY   – Standard Maps Platform key with Places API enabled.
                             Never expose this key in frontend code.
 
 Endpoints:
@@ -27,7 +27,7 @@ _TEXTSEARCH    = "https://maps.googleapis.com/maps/api/place/textsearch/json"
 _NEARBYSEARCH  = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
 _DETAILS       = "https://maps.googleapis.com/maps/api/place/details/json"
 
-_UNAVAILABLE_MSG = "Maps integration is currently unavailable. Add GOOGLE_MAPS_API_KEY to backend/.env to enable live supplier search."
+_UNAVAILABLE_MSG = "Maps integration is currently unavailable. Add NEXT_PUBLIC_GOOGLE_MAPS_API_KEY to backend/.env to enable live supplier search."
 
 # ── Pydantic models ────────────────────────────────────────────────────────────
 
@@ -57,7 +57,7 @@ class SuppliersResponse(BaseModel):
 # ── Internal helpers ───────────────────────────────────────────────────────────
 
 def _get_key() -> str:
-    return os.environ.get("GOOGLE_MAPS_API_KEY", "")
+    return os.environ.get("NEXT_PUBLIC_GOOGLE_MAPS_API_KEY", "")
 
 def _no_key_response() -> SuppliersResponse:
     return SuppliersResponse(
