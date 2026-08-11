@@ -26,14 +26,14 @@
 
 <p align="center">
   <a href="https://drive.google.com/file/d/1ziXvUwYBnDC0tkWOig68zK0IHpS5yBH7/view?usp=sharing">
-    <img src="docs/dashboard-preview.png" width="900">
+    <img src="docs/images/dashboard-preview.png" width="900">
   </a>
 </p>
 
 <p align="center">
   <strong>Click the preview image to watch the complete SentinAI demonstration.</strong>
 </p>
----
+
 
 ## 🚀 Overview
 
