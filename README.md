@@ -11,8 +11,7 @@
 </p>
 
 <p>
-  <a href="https://sentinai-tau.vercel.app"><img src="https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel" /></a>
-  <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi" />
+   <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi" />
   <img src="https://img.shields.io/badge/Frontend-Next.js%2015-black?style=for-the-badge&logo=next.js" />
   <img src="https://img.shields.io/badge/Database-Supabase%20PostgreSQL-3ECF8E?style=for-the-badge&logo=supabase" />
   <img src="https://img.shields.io/badge/AI-Groq%20%2B%20LLaMA%203-F55036?style=for-the-badge" />
@@ -78,24 +77,24 @@ engine/
 └────────────────────────┬────────────────────────────────────┘
                          │ HTTPS REST API
                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                     Render (Backend)                        │
-│   FastAPI · Python 3.12 · Docker · Uvicorn                 │
+┌───────────────────────────────────────────────────────────┐
+│                     Render (Backend)                      │
+│   FastAPI · Python 3.12 · Docker · Uvicorn                │
 │   ┌─────────────┐  ┌──────────────┐  ┌────────────────┐   │
 │   │  REST APIs  │  │  ML Engine   │  │ Groq LLM API   │   │
 │   │  /telemetry │  │ Z-score +    │  │ LLaMA 3.3 70B  │   │
 │   │  /anomalies │  │ Pattern Det. │  │ Copilot Chat   │   │
 │   │  /equipment │  │ Health Score │  └────────────────┘   │
 │   │  /dashboard │  └──────────────┘                       │
-│   └─────────────┘                                          │
-└────────────────────────┬────────────────────────────────────┘
+│   └─────────────┘                                         │
+└────────────────────────┬──────────────────────────────────┘
                          │ SQLAlchemy ORM
                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                  Supabase (PostgreSQL)                      │
-│   Tables: equipment · sensors · sensor_telemetry           │
-│           anomaly_events · maintenance_records             │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│                  Supabase (PostgreSQL)                  │
+│   Tables: equipment · sensors · sensor_telemetry        │
+│           anomaly_events · maintenance_records          │
+└─────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -350,7 +349,7 @@ This project is licensed under the **MIT License**.
 
 <div align="center">
 
-Built with ❤️ by [prabath-ux05](https://github.com/prabath-ux05)
+Built with ❤️ by Prabath D
 
 ⭐ **Star this repo if you found it useful!** ⭐
 
